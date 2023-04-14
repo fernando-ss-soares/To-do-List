@@ -1,8 +1,9 @@
 <template>
-    <header>
-        <h1>
-            <img src="../assets/vue.svg" alt="">
+    <header class="is-flex is-flex-direction-column is-flex-wrap-wrap is-justify-content-center is-align-content-center">
+        <h1 class="is-flex is-flex-direction-column is-flex-wrap-wrap is-justify-content-center is-align-content-center">
+            <img src="../assets/vue.svg" alt="" width="100"><br>
         </h1>
+        <p class="title is-3 has-text-white">To do List</p>
     </header>
 </template>
 
@@ -18,7 +19,7 @@ export default defineComponent({
 
 <style scoped>
 header {
-    background: #0d3b66;
+    background: #43919B;
     width: 100%;
     height: 100vh;
 }
@@ -28,4 +29,5 @@ header {
         height: auto;
     }
 }
+
 </style>

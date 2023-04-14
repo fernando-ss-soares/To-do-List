@@ -29,21 +29,21 @@ export default defineComponent({
   components: {
     Temporizador,
   },
-  data () {
+  data() {
     return {
-        descricao: ""
-    }
+      descricao: "",
+    };
   },
   methods: {
-    finalizarTarefa(tempoDecorrido : number) : void {
-        this.$emit('salvarTarefa', {
-          duracaoEmSegundos: tempoDecorrido,
-          descricao: this.descricao
-        })
-        this.descricao = "";
-    }
+    finalizarTarefa(tempoDecorrido: number): void {
+      this.$emit("salvarTarefa", {
+        duracaoEmSegundos: tempoDecorrido,
+        descricao: this.descricao,
+      });
+      this.descricao = "";
+    },
   },
-  emits: ['salvarTarefa']
+  emits: ["salvarTarefa"],
 });
 </script>
 
