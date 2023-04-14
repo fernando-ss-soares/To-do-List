@@ -36,10 +36,14 @@ export default defineComponent({
   },
   methods: {
     finalizarTarefa(tempoDecorrido : number) : void {
-        console.log(this.descricao, tempoDecorrido);
+        this.$emit('salvarTarefa', {
+          duracaoEmSegundos: tempoDecorrido,
+          descricao: this.descricao
+        })
         this.descricao = "";
     }
-  }
+  },
+  emits: ['salvarTarefa']
 });
 </script>
 
